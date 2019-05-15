@@ -1,0 +1,10 @@
+dn: uid=marta,ou=usuaris,dc=edt,dc=org
+changetype: modify
+add: objectclass
+objectclass: xmaster
+-
+add: xtitulo
+xtitulo: master colero
+-
+replace: mail
+mail: annaladelmaster@edt.org
