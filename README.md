@@ -21,7 +21,8 @@ docker network create sambanet
 Un cop creada aquesta xarxa posarem en martxa servidor LDAP en mode detach. 
 ```
 docker run --rm --name ldap -h ldap --network sambanet -d smbhomes:ldapserver 
-``
+```
+
 Comprovem que el nostre servidor estigui en martxa
 ```
 [root@i12 samba:homes]# docker ps
