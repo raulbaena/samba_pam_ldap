@@ -70,6 +70,15 @@ Ara comprovem que tot estigui ben montat
 ```
 
 
+## Odres docker 
+
+Execucio de tota la infraestructura 
+```
+docker network create sambanet
+docker run --rm --name ldap -h ldap --network sambanet -d raulbaena/smbhomes:ldapserver
+docker run --rm --name samba -h samba --privileged --network sambanet -it raulbaena/smbhomes:samba
+docker run --rm --name host -h host --privileged --network sambanet -it raulbaena/smbhomes:host
+```
 
 
 
